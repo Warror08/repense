@@ -1,0 +1,247 @@
+
+    <html lang="en">
+<head>
+  <title>REPENSE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<nav class="navbar navbar-light bg-faded" style="background-color: #64B5F6;">
+  <div style="height: 60;" class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <img style="margin: auto; position: relative; top: 6px;" 
+      class="navbar-brand" href="#" src="../images/repense.png"></img>
+    </div>
+    <div>
+      <button style="background-color: #BBDEFB; text-align: center; margin: auto; border: none; width: 80px; position: relative; top: 20px;" 
+      class="nav navbar-nav navbar-right"  type="submit" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Sair</button>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Tem certeza que deseja sair?</h4>
+            </div>
+            <div class="modal-footer">
+              <a href="apenas um teste" type="button" class="btn btn-default">Sair</a>
+              <a href="#" type="button" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+</nav>
+ <div class="lado">
+   <ul>
+  <br><br><br><br><br><br><br><br>
+  <li><a class="active" href="#home">Ínicio</a></li>
+  <br>
+  <li><a href="#news">Minhas Emoções</a></li>
+  <br>
+  <li><a href="#contact">Meus Pensamentos Disfuncionais</a></li>
+  <br>
+  <li><a href="#about">Feedback Psicologia</a></li>
+  <br>
+  <li><a href="#about">Feedback ETEP </a></li>
+ 
+</ul>
+ 
+</div>
+ 
+<div class="meio">
+
+    <border class="button button1">Analisar Registros de pensamentos Disfuncionais dos estudantes</border>
+
+    <select class="selecionar" name="select">
+        <option class="selev" value="valor1" selected>Escolha uma opção</option>
+        <option value="valor2">Doença do aluno</option>
+        <option value="valor3">Isolamento social profilático</option>
+        <option value="valor4">Morte de um familiar</option>
+        <option value="valor5">Tratamento ambulatorial</option>
+        <option value="valor6">Assistência na doença familiar</option>
+        <option value="valor7">Problemas com transporte</option>
+        <option value="valor8">Sem alimentação</option>
+        <option value="valor9">Suspenção preventiva</option>
+
+      </select>
+    <div class="conteudo">
+        <div class="calendario">
+          
+            <header>
+
+              <div class="div">
+                <h2 id="mes">Abril</h2>
+                <h2 id="ano"></h2>
+                <h2>digite a data da ausEncia</h2>
+              </div>
+                <a class="btn-ant" id="btn_ant"><</a>
+                <a class="btn-pro" id="btn_prox">></a>
+            </header>
+            <table>
+<thead>
+<tr>
+    <td> DOM </td>
+    <td> SEG </td>
+    <td> TER </td>
+    <td> QUA </td>
+    <td> QUI </td>
+    <td> SEX </td>
+    <td> SAB </td>
+</tr>
+</thead>
+<tbody id="dias">
+<tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+</tr>
+
+</tbody>
+            </table>
+           
+        </div>
+    </div>
+<button class="justificar">Justificar</button>
+</div>
+</div>
+  <div>
+    <footer>
+      <p>REPENSE<br>
+      <a href="EMAIL">2021</a></p>
+    </footer>
+  </div>
+</body>
+</html>
+ 
+ 
+
+    
+    <script>
+document.addEventListener("DOMContentLoaded",function() {
+     const monthsBR = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];  
+     const tableDays = document.getElementById('dias'); 
+     function GetDaysCalendar (mes,ano){ 
+          document.getElementById('mes').innerHTML = monthsBR[mes]; 
+          document.getElementById('ano').innerHTML = ano;
+    
+    let firstDayOfWeek = new Date(ano,mes,1).getDay()-1;
+    let getLastDayThisMonth = new Date(ano, mes+1,0).getDate();
+    
+    
+    for(var i = -firstDayOfWeek, index = 0; i < (42-firstDayOfWeek); i++, index++){
+     let dt = new Date(ano,mes, i);
+     let dtNow = new Date();
+     let dayTable = tableDays.getElementsByTagName('td')[index];
+     dayTable.classList.remove('mes-anterior');
+     dayTable.classList.remove('proximo-mes');
+     dayTable.innerHTML = dt.getDate();
+    
+    if(dt.getFullYear() == dtNow.getFullYear() && dt.getMonth() == dtNow.getMonth() && dt.getDate() == dtNow.getDate()){
+         dayTable.classList.add('dia-atual')
+    }
+    if(i < 1){
+    dayTable.classList.add('mes-anterior')}
+    
+    if(i > getLastDayThisMonth){ 
+     dayTable.classList.add('proximo-mes')
+    }
+}
+}
+    let now = new Date();
+    let mes = now.getMonth();
+    let ano = now.getFullYear()
+    GetDaysCalendar (mes,ano);
+    
+    const botao_proximo = document.getElementById('btn_prox'); 
+    const botao_anterior = document.getElementById('btn_ant');
+
+    botao_proximo.onclick=function(){
+         mes++;
+        
+         if(mes > 11){
+              mes=0;
+              ano++;
+         }
+         GetDaysCalendar(mes,ano);
+    }
+    botao_anterior.onclick=function(){
+         mes--;
+         if(mes < 0){
+           mes = 11;
+           ano--;
+         }
+         GetDaysCalendar(mes,ano);
+    }
+
+})
+
+    </script>
+</body>
+</html>
+ 
