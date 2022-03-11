@@ -107,9 +107,40 @@
     </div>
     <script src="<?= base_url()?>assets/js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="<?= base_url('assets/js/js.cookie.js')?>"></script>
-		<script src="<?= base_url('assets/js/settings.js') ?>"></script>
-  	<script src="<?= base_url('assets/js/client.js')?>"></script>
-      <script src="<?= base_url('assets/js/meulogin_suap.js')?>"></script>
+		<script src="<?= base_url('assets/js/api/js.cookie.js')?>"></script>
+		<script src="<?= base_url('assets/js/api/settings.js') ?>"></script>
+  	<script src="<?= base_url('assets/js/api/client.js')?>"></script>
+      <script>
+         var suap = new SuapClient(SUAP_URL, CLIENT_ID, REDIRECT_URI, SCOPE);
+suap.init();
+$("#suap-login-button").attr("href", suap.getLoginURL());
+var logoff = $("#logoff").val();
+
+if (logoff == "S" && suap.isAuthenticated()){
+    suap.logout();
+}
+
+if (suap.isAuthenticated()){
+    var escopos = suap.getToken().getScope();
+    suap.getResource(escopos, respostaSUAP);
+}
+
+function respostaSUAP(dados){
+    $.ajax({
+        url: BASE_URL+"/usuario/autenticar",
+        method: "post",
+        data: {
+            tipo_login: "api",
+            nome: dados.identificacao,
+            login: dados.email,
+            foto: ""
+        },
+        dataType: 'json'
+    }).done(function(){
+        window.location.href=BASE_URL;
+    });
+}
+
+      </script>
 </body>
 </html>
