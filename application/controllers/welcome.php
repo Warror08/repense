@@ -22,6 +22,7 @@ class welcome extends CI_Controller {
 	{
 		$this->load->view('pagina-principal');
 	}
+	
 	public function autenticar()
 	{
 		$this->load->model("Post_model");
@@ -34,8 +35,8 @@ class welcome extends CI_Controller {
 			$this->session->set_flashdata("sucesso", "logado com sucesso");
 		}else{
 		$this->session->set_flashdata("danger", "usuario ou senhas invalidos");
-	}
-redirect(url: '/');
+
+redirect('home_aluno');
 }
 
-}
+}}

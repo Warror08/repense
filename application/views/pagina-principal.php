@@ -54,6 +54,7 @@
                     
                     <button type="submit" class="btn btn-second">ENTRAR</button>        
                 </form>
+                <a href="#" id="suap-login-button">Login com SUAP</a>
             </div><!-- second column -->
         </div><!-- first content -->
         <div class="content second-content">
@@ -100,9 +101,15 @@
                     <a class="password" href="#">forgot your password?</a>
                     <button class="btn btn-second">sign in</button>
                 </form>
+            
             </div><!-- second column -->
         </div><!-- second-content -->
     </div>
     <script src="<?= base_url()?>assets/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="<?= base_url('assets/js/js.cookie.js')?>"></script>
+		<script src="<?= base_url('assets/js/settings.js') ?>"></script>
+  	<script src="<?= base_url('assets/js/client.js')?>"></script>
+      <script src="<?= base_url('assets/js/meulogin_suap.js')?>"></script>
 </body>
 </html>
