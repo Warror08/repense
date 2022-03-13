@@ -11,16 +11,8 @@
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
-<form method="post" action="<?= base_url('welcome/autenticar')?>">
+<form method="post" action="<?= base_url('login/store')?>">
     <div class="container">
-        <?php if($this->session->flashdata("sucesso")) : ?>
-            <p> <?=$this->session->flashdata("sucesso")?></p>
-            <?php endif ?>
-
-            <?php if($this->session->flashdata("danger")) : ?>
-                <p> <?=$this->session->flashdata("danger")?></p>
-            <?php endif ?>
-
         <div class="content first-content">
             <div class="first-column">
                 <h2 class="title title-primary">Bem-Vindo(a)! </h2>

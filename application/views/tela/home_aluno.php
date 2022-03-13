@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NavBar</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?= base_url();?>assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
@@ -21,7 +21,7 @@
       <img src="images/repense.png" alt="">
       </div>
       <div class="right_area">
-        <a href="#" class="logout_btn">Sair</a>
+      <p><button type="button" class="logout_btn" id="suap-logout-button">Sair</button></p>
       </div>
     </header>
     <!--header area end-->
@@ -29,6 +29,7 @@
     <div class="mobile_nav">
       <div class="nav_bar">
         <img src="images/usuario.png" class="mobile_profile_image" alt="">
+        <p><strong></strong> <span id="nome"></span></p>
         <i class="fa fa-bars nav_btn"></i>
       </div>
       <div class="mobile_nav_items">
@@ -44,7 +45,7 @@
     <div class="sidebar">
       <div class="profile_info">
         <img src="images/usuario.png" class="profile_image" alt="">
-        <h4>Usuário</h4>
+      	<p><strong></strong> <span id="nome"></span></p>
       </div>
       <a href="#"><i class="fas fa-desktop"></i><span>Usuario</span></a>
       <a href="#"><i class="fa-regular fa-face-grin-beam"></i><span>Minhas Emoções</span></a>
@@ -82,6 +83,30 @@
       $('.nav_btn').click(function(){
         $('.mobile_nav_items').toggleClass('active');
       });
+      var suap = new SuapClient(SUAP_URL, CLIENT_ID, REDIRECT_URI, SCOPE);
+      suap.init();
+      $(document).ready(function () {
+      		//$("#suap-login-button").attr('href', suap.getLoginURL());
+          if (suap.isAuthenticated()) {
+              var scope = suap.getToken().getScope();
+              var callback = function (response) {
+                  //$("#ident").text(JSON.stringify(response, null, 4)); //aqui vai mostrar todos os dados possíveis.
+                  $("#ident").text(response.identificacao);
+                  $("#nome").text(response.nome);
+									$("#email").text(response.email);
+                  $("#campus").text(response.campus);
+                  //aqui você vai adicionando os outros campos possíveis.
+              };
+             suap.getResource(scope, callback);
+          } else {
+          	  suap.logout();
+              window.location.href = "<?= base_url();?>application/views/login";
+          }
+      });
+      $("#suap-logout-button").click(function(){
+          suap.logout();
+          window.location.href = "<?= base_url();?>application/views/login";
+      });      
     });
     </script>
 
