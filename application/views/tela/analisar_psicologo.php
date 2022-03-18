@@ -245,7 +245,27 @@ btn.addEventListener("click", function() {
       } else {
         div.style.display = "none";
     }  
-});
+    var suap = new SuapClient(SUAP_URL, CLIENT_ID, REDIRECT_URI, SCOPE);
+      suap.init();
+      $(document).ready(function () {
+      		//$("#suap-login-button").attr('href', suap.getLoginURL());
+          if (suap.isAuthenticated()) {
+              var scope = suap.getToken().getScope();
+              var callback = function (response) {
+                  //$("#ident").text(JSON.stringify(response, null, 4)); //aqui vai mostrar todos os dados possíveis.
+                  $("#ident").text(response.identificacao);
+                  $("#nome").text(response.nome);
+									$("#email").text(response.email);
+                  $("#campus").text(response.campus);
+                  //aqui você vai adicionando os outros campos possíveis.
+              };
+             suap.getResource(scope, callback);
+          } else {
+          	  suap.logout();
+              window.location.href = "login.html";
+          }
+      });
+    });
     });
     </script>
 

@@ -56,15 +56,9 @@
     <!--sidebar end-->
 
     <div class="content">
-      <?php if($this->session->flashdata("sucess")) :?>
-        <p class="alert alert-sucess"><?= $this->session->flashdata("sucess")?></p>
-        <?php endif ?>
-
-        <?php if($this->session->flashdata("danger")) :?>
-        <p class="alert alert-danger"><?= $this->session->flashdata("danger")?></p>
-        <?php endif ?>
-      <h2>Registrar Pensamento Disfuncional </h2>
-      <form action=" <?= base_url() ?>usuario/enviar" method="post">
+    <p><?= $this->session->flashdata("msg"); ?></p>
+      <h2>Registrar Pensamento Disfuncional</h2>
+      <form method="post" action="<?= base_url('usuario/registrar')?>">
         <div class="form-group">
           <label for="matricula">Matricula</label>
           <input type="text" class="form-control" id="matri" placeholder="Matricula" name="matricula">
@@ -78,19 +72,19 @@
           <input type="text" class="form-control" id="situa" placeholder="Situacao" name="situacao">
         </div>
          <div class="form-group">
-          <label for="pensamen">Pensamentos</label>
-          <input type="text" class="form-control" id="pens" placeholder="Pensamentos" name="pensamentos">
+          <label for="pensamentos">Pensamentos</label>
+          <input type="text" class="form-control" id="pens" placeholder="Pensamentos" name="pensamente">
         </div>
         <div class="form-group">
-          <label for="sent">Sentimentos</label>
-          <input type="text" class="form-control" id="sen" placeholder="Sentimentos" name="sentimentos">
+          <label for="senttimentos">Sentimentos</label>
+          <input type="text" class="form-control" id="sen" placeholder="Sentimentos" name="sentimento">
         </div>
         <div class="form-group">
-          <label for="com">Comportamentos</label>
+          <label for="comportamento">Comportamentos</label>
           <input type="text" class="form-control" id="comp" placeholder="Comportamento" name="comportamento">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+       </form>
     </div> </div>
 
     <div class="Responsivo_area">

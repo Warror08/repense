@@ -18,18 +18,18 @@
         <i class="fas fa-bars" id="sidebar_btn"></i>
       </label>
       <div class="left_area">
-      <img src="images/repense.png" alt="">
+      <img src="<?= base_url();?>assets/images/repense.png" alt="">
       </div>
       <div class="right_area">
-      <p><button type="button" class="logout_btn" id="suap-logout-button">Sair</button></p>
+      <a href="<?= base_url();?>login"><button type="button" class="logout_btn" id="suap-logout-button">Sair</button></a>
       </div>
     </header>
     <!--header area end-->
     <!--mobile navigation bar start-->
     <div class="mobile_nav">
       <div class="nav_bar">
-        <img src="images/usuario.png" class="mobile_profile_image" alt="">
-        <p><strong></strong> <span id="nome"></span></p>
+        <img src="<?= base_url();?>assets/images/usuario.png" class="mobile_profile_image" alt="">
+        <h4 id="nome">Usuário</h4>
         <i class="fa fa-bars nav_btn"></i>
       </div>
       <div class="mobile_nav_items">
@@ -44,8 +44,8 @@
     <!--sidebar start-->
     <div class="sidebar">
       <div class="profile_info">
-        <img src="images/usuario.png" class="profile_image" alt="">
-      	<p><strong></strong> <span id="nome"></span></p>
+        <img src="<?= base_url();?>assets/images/usuario.png" class="profile_image" alt="">
+      <h4 id="nome">Usuario</h4>
       </div>
       <a href="#"><i class="fas fa-desktop"></i><span>Usuario</span></a>
       <a href="#"><i class="fa-regular fa-face-grin-beam"></i><span>Minhas Emoções</span></a>
@@ -57,7 +57,7 @@
 
     <div class="content">
       <div class="card">
-        <a href="1"><button>Realizar Registro de Pensamento Disfuncionais</button></a>
+        <a  href="<?= base_url();?>usuario/enviar"><button>Realizar Registro de Pensamento Disfuncionais</button></a>
       </div>
       <div class="card">
         <a href="1"><button>Registrar Justificativa de Falta</button></a>

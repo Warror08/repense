@@ -10,23 +10,42 @@ class usuario extends CI_Controller {
 		$data["listas"] = $this->listar_model->index();
 		$data["title"] = "titulo";
 		$this->load->view('tela/analisar_psicologo', $data);
-
 	}
-	public function enviar(){
+		public function novo()
+		{
+			$this->load->view('tela/enviarfed');
+		}
+	
+	/**public function registrar(){
         $matricula = $this->input->post('matricula');
-        $data = $this->input->post('data');
+		$data = $this->input->post('data');
         $situacao = $this->input->post('situacao');
-		$pensamentos = $this->input->post('pensamentos');
-        $sentimentos = $this->input->post('sentimentos');
+		$sentimentos = $this->input->post('sentimentos');
         $comportamento = $this->input->post('comportamento');
 
-        $this->load->model('Listar_Model');
-        $this->Listar_Model->inserir($matricula, $data, $situacao, $pensamentos, $sentimentos, $comportamento);
+        $this->load->model('listar_model');
+        $this->listar_model->inserir($matricula, $data, $situacao, $sentimentos, $comportamento);
 
         $this->session->set_flashdata("msg", "Dados inseridos com sucesso!");
-        redirect('telas/index');
+        redirect('usuario/novo');
 
     }
+	 /**public function enviar(){
+		*$lista = $_POST;
+		$this->load->model('listar_model');
+		*$this->listar_model->enviar($lista);
+      *$matricula = $this->input->post('matricula');
+        *$situacao = $this->input->post('situacao');
+		*$pensamentos = $this->input->post('pensamentos');
+        *$sentimentos = $this->input->post('sentimentos');
+        *$comportamento = $this->input->post('comportamento');
+
+        *$this->load->model('Listar_Model');
+        *$this->Listar_Model->inserir($matricula, $situacao, $pensamentos, $sentimentos, $comportamento);
+
+        *$this->session->set_flashdata("msg", "Dados inseridos com sucesso!");
+        *redirect('telas/index');*/
+    
 	public function pesquisar(){
 		$this->load->view('usuario/index');
 		$this->load->model('pesquisar_model');
