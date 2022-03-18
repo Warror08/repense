@@ -16,6 +16,22 @@ class usuario extends CI_Controller {
 			$this->load->view('tela/enviarfed');
 		}
 	
+	    public function registrar(){
+			$matricula = $this->input->post('matricula');
+			$data = $this->input->post('situacao');
+			$situacao = $this->input->post('pensamente');
+			$pensamentos = $this->input->post('matricula');
+			$sentimentos = $this->input->post('situacao');
+			$comportamento = $this->input->post('pensamente');
+	
+			$this->load->model('listar_model');
+			$this->listar_model->inserir($matricula, $data, $situacao, $pensamentos, $sentimentos, $comportamento);
+	
+			$this->session->set_flashdata("msg", "Dados inseridos com sucesso!");
+			redirect('usuario/novo');
+	
+		}
+	
 	/**public function registrar(){
         $matricula = $this->input->post('matricula');
 		$data = $this->input->post('data');
