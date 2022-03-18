@@ -57,7 +57,7 @@
 
     <div class="content">
       <div class="card">
-        <a  href="<?= base_url();?>usuario/enviar"><button>Realizar Registro de Pensamento Disfuncionais</button></a>
+        <a  href="<?= base_url();?>usuario/novo"><button>Realizar Registro de Pensamento Disfuncionais</button></a>
       </div>
       <div class="card">
         <a href="1"><button>Registrar Justificativa de Falta</button></a>
