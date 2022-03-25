@@ -50,7 +50,7 @@
       <a href="#"><i class="fas fa-desktop"></i><span>Usuario</span></a>
       <a href="#"><i class="fa-regular fa-face-grin-beam"></i><span>Minhas Emoções</span></a>
       <a href="#"><i class="fas fa-table"></i><span>Meus Pensamentos Disfuncionais</span></a>
-      <a href="#"><i class="fas fa-th"></i><span>Feedback Psicologia</span></a>
+      <a href="<?= base_url();?>usuario/mostrar"><i class="fas fa-th"></i><span>Feedback Psicologia</span></a>
       <a href="#"><i class="fas fa-info-circle"></i><span>Feedback ETEP</span></a>
     </div>
     <!--sidebar end-->
@@ -60,10 +60,10 @@
         <a  href="<?= base_url();?>usuario/novo"><button>Realizar Registro de Pensamento Disfuncionais</button></a>
       </div>
       <div class="card">
-        <a href="1"><button>Registrar Justificativa de Falta</button></a>
+        <a href=""><button>Registrar Justificativa de Falta</button></a>
       </div>
       <div class="card">
-        <a href="1"><button>Registrar estado Emocional</button></a>
+        <a href="<?= base_url();?>usuario/novoo"><button>Registrar estado Emocional</button></a>
       </div>
     </div>
 

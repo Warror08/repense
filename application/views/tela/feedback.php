@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NavBar</title>
-    <link rel="stylesheet" href="<?= base_url();?>assets/css/analise333.css">
+    <link rel="stylesheet" href="<?= base_url();?>assets/css/cssanalise.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="https://getbootstrap.com/docs/4.4/examples/dashboard/dashboard.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
@@ -18,7 +18,7 @@
         <i class="fas fa-bars" id="sidebar_btn"></i>
       </label>
       <div class="left_area">
-      <img src="images/repense.png" alt="">
+      <img src="<?= base_url();?>assets/images/repense.png" alt="">
       </div>
       <div class="right_area">
         <a href="#" class="logout_btn">Sair</a>
@@ -28,7 +28,7 @@
     <!--mobile navigation bar start-->
     <div class="mobile_nav">
       <div class="nav_bar">
-        <img src="<?= base_url();?>assets/images/repense.png" class="mobile_profile_image" alt="">
+        <img src="images/usuario.png" class="mobile_profile_image" alt="">
         <i class="fa fa-bars nav_btn"></i>
       </div>
       <div class="mobile_nav_items">
@@ -56,55 +56,49 @@
 
     <div class="content">
       <div class="button button1">Analisar Registros de pensamentos disfuncionais dos estudantes</div>
-      <form action="<?= base_url()?> usuario/pesquisar" method="post">
-      <div  class="header2">
-       <div class="header3">
-         <ul>
-           <li class="li1">Nome do aluno</li>
-           <li class="li2" name="matricula" id="matricula">Matrícula </li> 
-           <li class="li3">Data do Registro</li> 
-           <input type="text"></input>
-           <input type="text"></input>
-           <input type="text"></input>
-           <button id="btn" class="pesquisa" type="submit">
-             <i class="fa fa-search"></i>
-             </button>
-           </form>
-         </ul>
-       </div> 
-       
-      </div>
+
     <div id="teste" class="tabela">
     <div class="table-responsive">
 		<table class="table table-bordered table-hover">
 			<thead>
 				<tr>
-					<th>Data/Hora</th>
-					<th>Situação</th>
-					<th>Pensamentos</th>
-					<th>Emoções/Sentimentos</th>
-					<th>Compotamento</th>
+					<th>comentarios</th>
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach($listas as $lista) : ?>
+				<?php foreach($comentarios as $comentario) : ?>
           <tr>
-<td> <?= $lista['data']?></td>
-<td> <?= $lista['situacao']?></td>
-<td> <?= $lista['pensamentos']?></td>
-<td> <?= $lista['sentimentos']?></td>
-<td> <?= $lista['comportamento']?></td>
+<td> <?= $lista['comentario']?></td>
+
+          </tr>
+          <?php endforeach;?>
+			</tbody>
+		</table> 
+        <h1>teste</h1>
+        <div id="teste" class="tabela">
+    <div class="table-responsive">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>comentarios</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach($comentarioestado as $comentarioes) : ?>
+          <tr>
+<td> <?= $comentarioes['comentarioes']?></td>
+
           </tr>
           <?php endforeach;?>
 			</tbody>
 		</table>
 	</div>
-    </div>
+    </div> </div>
     <div id="teste2" class="texto">
       <p>Adicionar <br> comentário</p>
     </div> 
     <div id="teste3" class="comentarios">
-      <input name="coment" type="text"></input>
+      <input type="text"></input>
     </div> 
     <div id="teste4"class="buttonso">
       <button type="submit">Salvar</button>

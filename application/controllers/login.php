@@ -29,7 +29,7 @@ public function index(){
 
 	if($user){
 		$this->session->set_userdata("usuario_logado", $user);
-		redirect("usuario/index");
+		redirect("telas/psi");
 	}
 	else{
 		redirect("login");

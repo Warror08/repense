@@ -7,4 +7,8 @@ class Telas extends CI_Controller {
         
 		$this->load->view('tela/home_aluno');
 	}
+	public function psi(){
+        
+		$this->load->view('tela/home_psicologo');
+	}
 }

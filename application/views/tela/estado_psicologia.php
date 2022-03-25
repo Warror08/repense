@@ -79,21 +79,16 @@
 		<table class="table table-bordered table-hover">
 			<thead>
 				<tr>
-					<th>Data/Hora</th>
-					<th>Situação</th>
-					<th>Pensamentos</th>
-					<th>Emoções/Sentimentos</th>
-					<th>Compotamento</th>
+                    <th>Matricula</th>
+					<th>Estado emocional do aluno</th>
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach($listas as $lista) : ?>
+				<?php foreach($estados as $estado) : ?>
           <tr>
-<td> <?= $lista['data']?></td>
-<td> <?= $lista['situacao']?></td>
-<td> <?= $lista['pensamentos']?></td>
-<td> <?= $lista['sentimentos']?></td>
-<td> <?= $lista['comportamento']?></td>
+<td> <?= $estado['matricula']?></td>
+<td> <?= $estado['figura']?></td>
+
           </tr>
           <?php endforeach;?>
 			</tbody>
@@ -104,7 +99,7 @@
       <p>Adicionar <br> comentário</p>
     </div> 
     <div id="teste3" class="comentarios">
-      <input name="coment" type="text"></input>
+      <input type="text"></input>
     </div> 
     <div id="teste4"class="buttonso">
       <button type="submit">Salvar</button>

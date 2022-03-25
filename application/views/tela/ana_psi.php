@@ -56,7 +56,7 @@
 
     <div class="content">
       <div class="button button1">Analisar Registros de pensamentos disfuncionais dos estudantes</div>
-      <form action="<?= base_url()?> usuario/pesquisar" method="post">
+      <form action="<?= base_url()?>usuario/pesquisar" method="post">
       <div  class="header2">
        <div class="header3">
          <ul>
@@ -87,13 +87,13 @@
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach($listas as $lista) : ?>
+				<?php foreach($listagem as $result) : ?>
           <tr>
-<td> <?= $lista['data']?></td>
-<td> <?= $lista['situacao']?></td>
-<td> <?= $lista['pensamentos']?></td>
-<td> <?= $lista['sentimentos']?></td>
-<td> <?= $lista['comportamento']?></td>
+<td> <?= $result['data']?></td>
+<td> <?= $result['situacao']?></td>
+<td> <?= $result['pensamentos']?></td>
+<td> <?= $result['sentimentos']?></td>
+<td> <?= $result['comportamento']?></td>
           </tr>
           <?php endforeach;?>
 			</tbody>
@@ -104,7 +104,7 @@
       <p>Adicionar <br> comentário</p>
     </div> 
     <div id="teste3" class="comentarios">
-      <input name="coment" type="text"></input>
+      <input type="text"></input>
     </div> 
     <div id="teste4"class="buttonso">
       <button type="submit">Salvar</button>
